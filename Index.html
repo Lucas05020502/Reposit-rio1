@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logar</title>
+    <link rel="stylesheet" type="text/css" href="Css.css">
+</head>
+<body>
+<div id="PáginaAnterior">
+    <div class="Janela"></div>
+    <r class="SSZAP">Logar</r>
+    <input type="text" class="Usuario" id="Sublinhado1">
+    <input type="password" class="Usuario2" id="SenhaSecreta">
+    <button class="Logar" id="ParaTrocarCor">Logar</button>
+    <button id="BotãoRegistrar" class="RegistrarBotão">Não tem uma conta?</button>
+    <a class="NovaConta" href="http://127.0.0.1:5500/Html2.html">Não tem uma conta?</a>
+    <r class="ColocarUsuario">Usuário:</r>
+    <r class="ColocarSenha">Senha:</r>
+    <r class="Aviso">Não compartilhe sua senha!</r>
+    <div id="PáginaRegistrar">
+    </div>
+</div>
+
+
+<div id="PáginaNova" style="display: none;">
+
+    <div class="JanelaPáginaRegistrar">
+        <input class="RegistrarNome">
+        <input class="RegistrarSenha" type="password">
+        <input class="RegistrarEmail" type="email">
+        <r class="RegistrandoNome" id="Guardando1">Usuário:</r>
+        <r class="RegistrandoSenha" id="Guardando2">Senha:</r>
+        <r class="RegistrandoEmail" id="Guardando3">Email:</r>
+        <button class="BotãoCriarConta" id="RegistrandoInformações">Registrar</button>
+        <button id="Voltar1" class="Voltar1">Voltar</button>
+
+    </div>
+</div>
+
+<div id="Página3" style="display: none;">
+<h1>
+    Funcionou!
+</h1>
+
+</div>
+
+
+
+    <style>
+        body{
+    background-image: linear-gradient(to bottom, #433a69, #5c55b9);
+    height: 690px; 
+}
+
+
+.Janela{
+    display: flex;
+    height: 500px;
+    width: 500px;
+    color: rgb(255, 255, 255);
+    background-color: #44465a;
+    margin-top: 25px;
+    margin-left: 400px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+
+    
+}
+
+.SSZAP{
+    display: block;
+    margin-top: -454px;
+    margin-left: 630px;
+    font-size: 25px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.Usuario{
+    display: flex;
+    width: 300px;
+    margin-top: 90px;
+    margin-left: 510px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.Usuario2{
+    display: flex;
+    width: 300px;
+    margin-top: 90px;
+    margin-left: 510px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: white;
+}
+
+.Logar{
+    display: block;
+    height: 40px;
+    width: 300px;
+    background-color: green;
+    margin-top: 90px;
+    margin-left: 510px;
+    color:  white;
+}
+
+
+.NovaConta{
+    display: block;
+    margin-top: 50px;
+    color: transparent
+}
+
+.ColocarUsuario{
+    display: block;
+    margin-top: -354px;
+    margin-left: 640px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.ColocarSenha{
+    display: block;
+    margin-top: 85px;
+    margin-left: 640px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:  white;
+}
+
+.Aviso{
+    display: block;
+    margin-top: 34px;
+    margin-left: 570px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray
+}
+
+.RegistrarBotão{
+    display: block;
+    position: relative;
+    background-color: green;
+    margin-top: 45px;
+    margin-left: 750px;
+}
+
+.JanelaRegistrar{
+
+    height: 500px;
+    width: 500px;
+    color: rgb(255, 255, 255);
+    background-color: #44465a;
+    margin-top: 25px;
+    margin-left: 400px;
+}
+
+#PáginaNova{
+    display: block;
+}
+
+.JanelaPáginaRegistrar{
+    display: flex;
+    height: 500px;
+    width: 590px;
+    color: rgb(255, 255, 255);
+    background-color: #44465a;
+    margin-top: 25px;
+    margin-left: 350px;
+}
+
+.RegistrarNome{
+    display: block;
+    margin-top: 90px;
+    margin-left: 180px;
+    height: 25px;
+    width: 250px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.RegistrarSenha{
+    display: block;
+    margin-top: 200px;
+    margin-left: -255px;
+    height: 25px;
+    width: 250px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.RegistrarEmail{
+    display: block;
+    margin-top: 310px;
+    margin-left: -255px;
+    height: 25px;
+    width: 250px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    color: white;
+    
+}
+
+
+
+.RegistrandoNome{
+    margin-top: 70px;
+    margin-left: -150px;
+}
+
+.RegistrandoSenha{
+    margin-top: 170px;
+    margin-left: -50px;
+}
+
+.RegistrandoEmail{
+    margin-top: 270px;
+    margin-left: -40px;
+}
+
+.BotãoCriarConta{
+    display: block;
+    height: 30px;
+    width: 290px;
+    margin-top: 410px;
+    margin-left: -160px;
+    background-color: green
+}
+
+.Voltar1{
+    display: block;
+    background-color: white;
+    height: 25px;
+    width: 140px;
+    margin-top: 15px;
+    margin-left: -425px;
+    background-color: green;
+}
+
+
+
+    </style>
+    
+<script>
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Obter valor de um cookie
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1, c.length);
+    }
+    if (c.indexOf(nameEQ) == 0) {
+      return c.substring(nameEQ.length, c.length);
+    }
+  }
+  return null;
+}
+
+    var MudarCorLogar = document.querySelector("#ParaTrocarCor");
+
+    MudarCorLogar.addEventListener("mouseover", function(){
+        MudarCorLogar.style.backgroundColor = "gray";
+    });
+
+    MudarCorLogar.addEventListener("mouseout", function(){
+        MudarCorLogar.style.backgroundColor = "green";
+    });
+
+    CorRegistrar = document.querySelector("#BotãoRegistrar")
+        CorRegistrar.addEventListener("mouseover", function(){
+            CorRegistrar.style.backgroundColor = "Gray";
+        });
+
+    CorRegistrar = document.querySelector("#BotãoRegistrar")
+        CorRegistrar.addEventListener("mouseout", function(){
+            CorRegistrar.style.backgroundColor = "Green";
+        });
+
+    
+        var CriarContaNova = document.querySelector("#BotãoRegistrar");
+var PaginaAnterior = document.querySelector("#PáginaAnterior");
+var PaginaNova = document.querySelector("#PáginaNova");
+var Página3 = document.querySelector("#Página3")
+var Registrar = document.querySelector("#RegistrandoInformações");
+var Valor = document.querySelector(".Usuario").value;
+var Senha = document.querySelector(".Usuario2").value;
+Voltar = document.querySelector("#Voltar1")
+
+CriarContaNova.addEventListener("click", function() {
+  PaginaAnterior.style.display = "none";
+  PaginaNova.style.display = "block";
+
+});
+
+Registrar.addEventListener("click", function() {
+    var Guardar1 = document.querySelector(".RegistrarNome").value;
+    var Guardar2 = document.querySelector(".RegistrarSenha").value;
+    var Guardar3 = document.querySelector(".RegistrarEmail").value;
+    var LoginButton = document.querySelector("#ParaTrocarCor");
+
+
+    setCookie("ValorCampo", Guardar1, 365);
+    setCookie("ValorCampo2", Guardar2, 365);
+    setCookie("ValorCampo3", Guardar3, 365);
+
+    console.log(Guardar1)
+    console.log(Guardar2)
+    console.log(Guardar3)
+});
+
+
+
+window.addEventListener("load", function() {
+    var storedValue = getCookie("ValorCampo");
+    if (storedValue) {
+        document.querySelector(".RegistrarNome").value = storedValue;
+    }
+});
+
+window.addEventListener("load", function() {
+    var storedValue = getCookie("ValorCampo2");
+    if (storedValue) {
+        document.querySelector(".RegistrarSenha").value = storedValue;
+    }
+});
+
+window.addEventListener("load", function() {
+    var storedValue = getCookie("ValorCampo3");
+    if (storedValue) {
+        document.querySelector(".RegistrarEmail").value = storedValue;
+    }
+});
+
+Registrar.addEventListener("mouseover", function(){
+    Registrar.style.backgroundColor = "gray"
+});
+
+Registrar.addEventListener("mouseout", function(){
+    Registrar.style.backgroundColor = "green"
+});
+
+Voltar.addEventListener("mouseover", function(){
+    Voltar.style.backgroundColor = "gray"
+
+});
+
+Voltar.addEventListener("mouseout", function(){
+    Voltar.style.backgroundColor = "green"
+
+});
+
+
+Voltar.addEventListener("click", function(){
+    PaginaNova.style.display = "none";
+    PaginaAnterior.style.display = "block";
+
+});
+
+LoginButton = document.querySelector("#ParaTrocarCor");
+
+LoginButton.addEventListener("click", function(){
+        var Nome = document.querySelector(".Usuario").value;
+        var Senha = document.querySelector(".Usuario2").value;
+        var storedNome = getCookie("ValorCampo");
+        var storedSenha = getCookie("ValorCampo2");
+
+        if (Nome === storedNome && Senha === storedSenha) {
+            alert("Login bem-sucedido!");
+            PaginaAnterior.style.display = "none";
+            Página3.style.display = "block";
+ 
+        } else {
+            alert("Nome de usuário ou senha incorretos.");
+        }
+    });
+    
+</script> 
+
+
+</body>
+</html>
